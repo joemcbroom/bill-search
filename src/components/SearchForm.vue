@@ -38,7 +38,7 @@ export default {
     submit: function () {
       const term = this.input;
       const occurences = this.billText.reduce((acc, curr) => {
-        return (acc += curr.includes(term));
+        return (acc += curr.toLowerCase().includes(term.toLowerCase()));
       }, 0);
       this.results.push({
         term: term,
