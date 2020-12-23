@@ -4,6 +4,7 @@
     <a
       class="bill-link"
       href="https://rules.house.gov/sites/democrats.rules.house.gov/files/BILLS-116HR133SA-RCP-116-68.pdf"
+      target="_blank"
       >Bill Text (pdf)</a
     >
     <form ref="form">
