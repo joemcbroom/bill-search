@@ -33,9 +33,11 @@
 				:key="item.term"
 			>
 				<li>
-					HR133 contains the word
+					The word
 					<span class="search-term">{{ item.term }}</span>
-					<span class="occurences">{{ item.occurences }}</span> times
+					occurs
+					<span class="occurences">{{ item.occurences }}</span>
+					times
 				</li>
 			</ul>
 		</div>
@@ -58,7 +60,9 @@ export default {
 		submit: function () {
 			const term = this.input;
 			const occurences = this.billText.reduce((acc, curr) => {
-				return (acc += curr.toLowerCase().includes(term.toLowerCase()));
+				return (acc += curr
+					.toLowerCase()
+					.includes(term.toLowerCase().trim()));
 			}, 0);
 			this.results.push({
 				term: term,
